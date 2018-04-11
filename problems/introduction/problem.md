@@ -1,22 +1,4 @@
-# Node Reinforcement Workshop
-
-Worshopper style training to reinforce knowledge of node.js
-
-## Workshop
-
-### Install the workshop
-
-`npm i -g nrw`
-
-### Launch the workshop
-
-`nrw`
-
-### Test your solution
-
-`nrw verify myfile.js`
-
-## Before you start :
+# INTRODUCTION
 
 Before starting the workshop, it's important to be sure you understand javascript Callback mechanism.
 
@@ -72,7 +54,7 @@ The next snippet simply logs the output after 3 seconds.
 
 ```JS
 console.log('first');
-const logGreet = () => console.log(greetAll(['John','Arya','Sansa']));
+const logGreet = () =>console.log(greetAll(['John','Arya','Sansa']));
 setTimeout(logGreet,3000);
 console.log('last');
 ```
@@ -168,13 +150,3 @@ console.log('third');
 
 Output will be :<br/>
 `first third second`
-
----
-
-_sources_
-
-[blocking vs non-blocking](https://nodejs.org/en/docs/guides/blocking-vs-non-blocking/)
-
-[don't block the event loop](https://nodejs.org/en/docs/guides/dont-block-the-event-loop/)
-
-[event loop, timers and nextTick](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)

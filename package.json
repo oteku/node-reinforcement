@@ -1,0 +1,39 @@
+{
+  "name": "nrw",
+  "version": "0.1.0",
+  "description": "Worshopper style training to reinforce knowledge of node.js",
+  "main": "./index.js",
+  "bin": {
+    "nrw": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oteku/node-reinforcement.git"
+  },
+  "keywords": [
+    "workshopper",
+    "node",
+    "callback",
+    "callstack",
+    "events",
+    "async"
+  ],
+  "preferGlobal": true,
+  "author": "Thomas Haessle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oteku/node-reinforcement/issues"
+  },
+  "homepage": "https://github.com/oteku/node-reinforcement#readme",
+  "dependencies": {
+    "colors": "^1.2.1",
+    "diff": "^3.5.0",
+    "workshopper-adventure": "^6.0.3"
+  },
+  "devDependencies": {
+    "prettier": "^1.11.1"
+  }
+}
