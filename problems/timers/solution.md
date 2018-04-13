@@ -1,6 +1,6 @@
 # Dr Who achievement !
 
-You did it! You created a function that takes input, processes that input, and provides output.
+You did it!
 
 ---
 

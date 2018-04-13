@@ -76,8 +76,6 @@ setTimeout(() => console.log('log in at least 3 seconds'), 3000);
 
 _setTimeout_ timer aims to plan an asynchronous task "in at least" a delta time. There is few use case in node.js where using setTimeout is a good solution. You should avoid using this timer and always prefer events which are more reliable.
 
-## Unref timers
-
 ## Excercise
 
 ```js
@@ -92,7 +90,7 @@ const sensaSay = say(sensa);
 
 * create a `timer.js` file and copy paste this code
 
-* implemente this scenario :
+* implement this scenario using timers :
 
 1.  Sensa must say "For the north" each second, during 10 seconds
 
