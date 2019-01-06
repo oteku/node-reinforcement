@@ -16,7 +16,6 @@
   "keywords": [
     "workshopper",
     "node",
-    "callback",
     "callstack",
     "events",
     "async"
