@@ -150,3 +150,62 @@ console.log('third');
 
 Output will be :<br/>
 `first third second`
+
+## Try the workshop
+
+The purpose of this tutorial exercice is to print
+`first third second`
+
+create a file :
+
+```sh
+touch introduction.js
+```
+
+Edit it :
+
+```js
+const bar = cb => {
+  console.log('first');
+  // node API equivalent to setTimeout(cb,0) of web API
+  return setImmediate(cb);
+};
+// bar is an asynchronous high order function
+bar(() => console.log('second'));
+console.log('forth');
+```
+
+While you code is a valide nodejs program you can run it :
+
+```sh
+node ./introduction.js
+```
+
+or
+
+use `nrw run` command to see only the output
+
+```sh
+nrw run ./introduction.js
+```
+
+when you think your solution is valid, just use `nrw verify`
+
+```sh
+nrw verify ./introduction.js
+```
+
+oups there is a mistake ! Edit `introduction.js`again.
+
+```js
+const bar = cb => {
+  console.log('first');
+  // node API equivalent to setTimeout(cb,0) of web API
+  return setImmediate(cb);
+};
+// bar is an asynchronous high order function
+bar(() => console.log('second'));
+console.log('third');
+```
+
+Finaly succeed. Now just run `nrw` to select a new exercice.
