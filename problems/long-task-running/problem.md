@@ -10,7 +10,7 @@ const heavyDo = () => {
   for (let i = 0; i < 1e8; i++) {
     if (
       Math.round(
-        Math.log(Math.sqrt(Math.abs(Math.round(Math.random() * 1000))))
+        Math.log(Math.sqrt(Math.abs(Math.round(Math.random() * 1e10))))
       ) === 1
     )
       count++;
@@ -32,7 +32,7 @@ const notSoHeavyDo = times => {
   for (let i = 0; i < times; i++) {
     if (
       Math.round(
-        Math.log(Math.sqrt(Math.abs(Math.round(Math.random() * 1000))))
+        Math.log(Math.sqrt(Math.abs(Math.round(Math.random() * 1e10))))
       ) === 1
     )
       count++;
@@ -70,7 +70,7 @@ const cp = require('child_process');
 
 setInterval(() => console.log('I am not blocked'), 1000);
 
-const subprocess = cp.fork('timers.js');
+const subprocess = cp.fork('heavy.js');
 ```
 
 your outupt should be like :
@@ -90,4 +90,4 @@ I am not blocked
 
 ## Exercice
 
-Find a solution to make the heavyDo really asynchronous without a child process.
+Find a solution to make the heavyDo really asynchronous without a child process and stop after 10 secondes.

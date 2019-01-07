@@ -3,7 +3,7 @@ const notSoHeavyDo = times => {
   for (let i = 0; i < times; i++) {
     if (
       Math.round(
-        Math.log(Math.sqrt(Math.abs(Math.round(Math.random() * 1000))))
+        Math.log(Math.sqrt(Math.abs(Math.round(Math.random() * 1e10))))
       ) === 1
     )
       count++;
@@ -41,6 +41,9 @@ for (let i = 0; i < cuts; i++) {
   heavyJobs.add(() => notSoHeavyDo(total / cuts));
 }
 
-setInterval(() => console.log('I am not blocked'), 1000);
+const timer = setInterval(() => console.log('I am not blocked'), 1000);
+setTimeout(() => {
+  clearInterval(timer);
+}, 10000);
 
 heavyJobs.do(counts => console.log(counts));
