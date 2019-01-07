@@ -167,6 +167,18 @@ console.log(p);
 
 * create a `promises.js` file and copy paste this code
 
+* You will use the implementation below to says functions that return promises :
+
+```js
+const john = 'John';
+const arya = 'Arya';
+const sensa = 'Sensa';
+const say = hero => sentence => Promise.resolve(`${hero} says : ${sentence}`);
+const johnSay = say(john);
+const aryaSay = say(arya);
+const sensaSay = say(sensa);
+```
+
 * implement this scenario using promises :
 
 1.  Sensa must say "For the North" each second
@@ -174,6 +186,8 @@ console.log(p);
 2.  After the first time Sansa says her sentence, John must say "Winter is coming"
 
 3.  After each time Sansa says her sentence, Arya must say "The King in the North"
+
+4.  The program must end after 10 seconds
 
 ---
 
