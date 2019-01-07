@@ -124,6 +124,26 @@ myEmitter.on('error', err => {
 myEmitter.emit('error', new Error('Gate is broken!'));
 ```
 
+What can be done if a Timeout or Immediate object needs to be cancelled? setTimeout(), setImmediate(), and setInterval() return a timer object that can be used to reference the set Timeout or Immediate object. By passing said object into the respective clear function, execution of that object will be halted completely.
+
+```js
+const timeoutObj = setTimeout(() => {
+  console.log('timeout beyond time');
+}, 1500);
+
+const immediateObj = setImmediate(() => {
+  console.log('immediately executing immediate');
+});
+
+const intervalObj = setInterval(() => {
+  console.log('interviewing the interval');
+}, 500);
+
+clearTimeout(timeoutObj);
+clearImmediate(immediateObj);
+clearInterval(intervalObj);
+```
+
 ## Excercise
 
 * create a `emitters.js` file and copy paste this code
@@ -135,3 +155,5 @@ myEmitter.emit('error', new Error('Gate is broken!'));
 2.  After the first time Sansa says her sentence, John must say "Winter is coming"
 
 3.  After each time Sansa says her sentence, Arya must say "The King in the North" asynchronously based on an event 'arya'
+
+4.  The program must end after 5 seconds

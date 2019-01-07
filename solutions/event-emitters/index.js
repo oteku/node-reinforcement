@@ -17,4 +17,7 @@ myEmitter.once('north', () => johnSay('Winter is coming'));
 
 myEmitter.on('arya', () => aryaSay('The king in the North'));
 
-setInterval(() => myEmitter.emit('north'), 1000);
+const timer = setInterval(() => myEmitter.emit('north'), 1000);
+setTimeout(() => {
+  clearInterval(timer);
+}, 5000);
